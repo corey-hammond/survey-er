@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="{% url 'survey:index' %}">Surveys <span class="sr-only">(current)</span></a>
+              <a class="nav-link disabled" href="{% url 'survey:index' %}" aria-disabled="true">Login <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <!-- Found admin:index on StackOverflow -->
@@ -19,14 +19,14 @@
                 Actions
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{% url 'survey:index' %}">View surveys</a>
                 <a class="dropdown-item" href="{% url 'survey:question_create' %}">Create a new survey</a>
-                <a class="dropdown-item" href="#">Pending...</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Pending...</a>
+                <a class="dropdown-item" href="{% url 'admin:survey_choice_add' %}">Add choices to your questions</a>
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Login</a>
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">About</a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
