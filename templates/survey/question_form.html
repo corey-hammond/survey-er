@@ -1,0 +1,11 @@
+{% extends 'base.html' %} 
+{% block content %}
+
+<a href="{% url 'survey:index' %}" class="btn btn-secondary btn-sm mb-3">Back to Survey</a>
+<h1 class="text-center mb-3">New Question</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success btn-lg btn-block mt-4">Save</button>
+</form>
+{% endblock %}
