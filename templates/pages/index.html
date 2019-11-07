@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block index %}
+
+      <!-- JUMBOTRON -->
+      <div class="jumbotron text-center">
+        <div class="container">
+          <h1>Welcome to Survey-er</h1>
+          <p>An app to create your own surveys</p>
+          <a href="{% url 'survey:index' %}" class="btn btn-primary">View Surveys</a>
+        </div>
+      </div>
+
+{% endblock %}
